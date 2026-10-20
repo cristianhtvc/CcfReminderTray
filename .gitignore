@@ -1,0 +1,23 @@
+# 构建产物
+bin/
+obj/
+*.user
+.vs/
+
+# 发布产物（本地生成，不入库）
+artifacts/
+
+# 工具临时文件
+.claude/
+
+# 开发期下载的真实数据样本（仅供本地检查，不入库）
+dev_samples/
+
+# 阶段 0 核验证据（本地留存，不纳入版本库）
+.verify_ccfddl/
+ccf_pdf_dl/
+
+# 凭证与本地配置（本项目不应出现，防御性排除）
+*.key
+*.secret
+secrets.*

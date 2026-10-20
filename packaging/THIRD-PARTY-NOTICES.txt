@@ -1,0 +1,88 @@
+THIRD-PARTY NOTICES — 会议截稿提醒（CcfReminderTray）
+=====================================================
+
+本应用使用下列第三方数据与运行时组件，按各自许可保留版权与许可声明。
+
+1. ccfddl / ccf-deadlines（会议截止数据来源）
+---------------------------------------------
+- 项目：ccfddl/ccf-deadlines，https://github.com/ccfddl/ccf-deadlines
+- 数据地址：https://ccfddl.com/conference/allconf.json
+- 用途：ICML、ICLR、NeurIPS、AAMAS、AAAI、DAI 六个会议的届次与截止时间聚合数据。
+  数据为社区维护的聚合信息，本应用未逐项对照各会议官网核验；如有出入，
+  以当届会议官方网站 / 官方投稿页面为准。
+- 许可：MIT License
+
+MIT License
+
+Copyright (c) 2021 CCFDDL
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+2. Microsoft .NET 运行时（随自包含应用一并分发的二进制）
+--------------------------------------------------------
+本应用以 .NET 10 自包含形式分发，exe 内含 Microsoft 构建的 .NET 运行时二进制。
+经核对 Microsoft 官方发布物，这些二进制并非笼统地“只适用 MIT”：
+
+- Microsoft 构建的 .NET 二进制适用《MICROSOFT SOFTWARE LICENSE TERMS —
+  MICROSOFT .NET LIBRARY》。该条款将运行时列为“Distributable Code”，允许以
+  目标代码形式随自行开发的程序复制与分发，并附分发要求与限制（例如：须在程序中
+  增加主要功能、不得改动版权/商标/专利声明、不得使人误认为程序来自 Microsoft）。
+  该许可文本随 .NET 安装分发（安装目录下 LICENSE.txt），在线版本：
+  https://dotnet.microsoft.com/dotnet_library_license.htm
+- .NET 运行时包含第三方组件，其中一些适用与 .NET 运行时本身不同的许可
+  （例如 Apache-2.0、BSD 等）。完整声明见随 .NET 分发的 ThirdPartyNotices.txt
+  （一千余行），在线版本：
+  https://github.com/dotnet/runtime/blob/main/THIRD-PARTY-NOTICES.TXT
+- dotnet/runtime 的源代码仓库以 MIT 发布，Copyright (c) .NET Foundation
+  and Contributors：https://github.com/dotnet/runtime/blob/main/LICENSE.TXT
+  （以上为 Microsoft 官方文件所述内容的转述，不构成法律意见。）
+
+3. Inno Setup 简体中文界面消息文件（仅用于构建安装程序）
+--------------------------------------------------------
+- 安装程序的中文界面文本来自 ChineseSimplified.isl，取自 Inno Setup 官方仓库
+  jrsoftware/issrc 的 is-6_7_3 标签：
+  https://github.com/jrsoftware/issrc/blob/is-6_7_3/Files/Languages/Unofficial/ChineseSimplified.isl
+- 该文件为用户贡献翻译，官方分发页：https://jrsoftware.org/files/istrans/
+  文件头部标注维护者 Zhenghan Yang，翻译上游：
+  https://github.com/kira-96/Inno-Setup-Chinese-Simplified-Translation
+- 该文件头部未附带单独的许可文本；此处仅如实标注来源与维护者，不作许可推断。
+
+4. Inno Setup 安装引擎（编译时嵌入安装程序，随安装包一并分发）
+--------------------------------------------------------------
+- 此前“仅为构建期工具、未包含在分发包中”的表述不准确，更正如下：
+  Inno Setup 编译器本身不随我们的分发包提供；但生成的安装程序
+  （CcfReminderTray-Setup-*.exe）内含 Inno Setup 的安装引擎组件
+  （编译时由 Inno Setup 自动嵌入，含卸载器），该组件属于 Inno Setup 的
+  二进制再分发，受 Inno Setup License 约束。
+- Inno Setup License（zlib 风格）要点：版权 (C) 1997-2026 Jordan Russell，
+  部分 (C) 2000-2026 Martijn Laan；允许任意用途使用与再分发，条件包括
+  二进制再分发须保留其中既有的版权与网站声明（本安装程序未删改这些内嵌声明）、
+  不得谎报来源。按许可第 3 条“在产品文档中注明将不胜感激”，特此注明：
+  本产品的安装程序使用 Inno Setup 构建，https://jrsoftware.org/
+- 许可全文：安装 Inno Setup 后见安装目录 license.txt；在线官方原文（2026-10-14
+  核验可访问，HTTP 200；此前所写的 islicense.php 经核验为 404，已更正）：
+  https://jrsoftware.org/files/is/license.txt
+
+附：合规性如实说明
+------------------
+以上声明基于我们对 ccfddl LICENSE、Microsoft .NET Library License、.NET 运行时
+ThirdPartyNotices、Inno Setup License 及相关文件头部的核对。我们未做逐条法律审查，
+不能宣称已全面合规；例如 Microsoft .NET Library License 对“Distributable Code”的
+全部分发要求（如要求最终用户同意不低于该条款保护力度的条款等）是否需要在最终用户
+协议中进一步落实，列为待核查项。如有疑问，请以各许可原文为准。

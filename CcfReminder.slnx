@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CcfReminder.Core/CcfReminder.Core.csproj" />
+    <Project Path="src/CcfReminderTray/CcfReminderTray.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CcfReminder.Core.Tests/CcfReminder.Core.Tests.csproj" />
+  </Folder>
+</Solution>

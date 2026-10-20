@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\CcfReminder.Core\CcfReminder.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 设置窗布局回归测试需要构造 internal 的 SettingsForm -->
+    <InternalsVisibleTo Include="CcfReminder.Core.Tests" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <AssemblyName>CcfReminderTray</AssemblyName>
+    <RootNamespace>CcfReminderTray</RootNamespace>
+    <AssemblyTitle>会议截稿提醒</AssemblyTitle>
+    <Description>个人会议截稿托盘提醒（ICML/ICLR/NeurIPS/AAMAS/AAAI/DAI，数据来源 ccfddl，未逐项核验）</Description>
+    <Version>1.0.4</Version>
+  </PropertyGroup>
+
+</Project>
